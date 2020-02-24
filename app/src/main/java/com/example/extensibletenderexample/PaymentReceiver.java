@@ -18,7 +18,7 @@ public class PaymentReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         mContext = context;
 
-        String orderId = intent.getStringExtra("order_id");
+        String orderId = intent.getStringExtra(Intents.EXTRA_CLOVER_ORDER_ID);
         String paymentId = intent.getStringExtra(Intents.EXTRA_CLOVER_PAYMENT_ID);
         String tenderKey = intent.getStringExtra(Intents.EXTRA_CLOVER_TENDER_LABEL_KEY);
         long amount = intent.getLongExtra("com.clover.intent.extra.AMOUNT", 0L);

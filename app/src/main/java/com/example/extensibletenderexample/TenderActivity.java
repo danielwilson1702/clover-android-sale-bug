@@ -42,7 +42,7 @@ public class TenderActivity extends Activity {
         Log.d("TenderActivity", "Order ID received from Tender = " + orderId);
         Log.d("TenderActivity", "Caching " + orderId + " to local preferences");
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        prefs.edit().putString("last_order_id", orderId).apply();
+        prefs.edit().putString("last_order_id", orderId).commit();
 
         final TextView merchantIdText = (TextView) findViewById(R.id.text_merchantId);
         setTextOrNull(merchantIdText, merchantId);
